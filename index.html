@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexSphere Media</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 20px; }
+        h1 { color: #333; }
+        ul { list-style-type: none; padding: 0; }
+        li { margin-bottom: 10px; }
+        a { color: #1a73e8; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_ADSENSE_ID"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1>Welcome to NexSphere Media</h1>
+    <p>Explore our latest articles:</p>
+    <ul id="article-list">
+        <!-- Article links will be dynamically inserted here -->
+    </ul>
+
+    <script>
+        fetch('articles.json')
+            .then(response => response.json())
+            .then(articles => {
+                const articleList = document.getElementById('article-list');
+                articles.forEach(article => {
+                    const li = document.createElement('li');
+                    const a = document.createElement('a');
+                    a.href = article.path;
+                    a.textContent = article.title;
+                    li.appendChild(a);
+                    articleList.appendChild(li);
+                });
+            });
+    </script>
+
+    <script>
+        fetch('articles.json')
+            .then(response => response.json())
+            .then(articles => {
+                const articleList = document.getElementById('article-list');
+                articles.forEach(article => {
+                    const li = document.createElement('li');
+                    const a = document.createElement('a');
+                    a.href = article.path;
+                    a.textContent = article.title;
+                    li.appendChild(a);
+                    articleList.appendChild(li);
+                });
+            });
+    </script>
+    </body>
+</html>
