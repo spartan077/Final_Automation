@@ -12,14 +12,12 @@
         a { color: #1a73e8; text-decoration: none; }
         a:hover { text-decoration: underline; }
     </style>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_ADSENSE_ID"
-     crossorigin="anonymous"></script>
 </head>
 <body>
     <h1>Welcome to NexSphere Media</h1>
     <p>Explore our latest articles:</p>
     <ul id="article-list">
-        <!-- Article links will be dynamically inserted here -->
+        <!-- Articles will be loaded here -->
     </ul>
 
     <script>
@@ -27,6 +25,7 @@
             .then(response => response.json())
             .then(articles => {
                 const articleList = document.getElementById('article-list');
+                articleList.innerHTML = ''; // Clear existing items
                 articles.forEach(article => {
                     const li = document.createElement('li');
                     const a = document.createElement('a');
@@ -35,23 +34,11 @@
                     li.appendChild(a);
                     articleList.appendChild(li);
                 });
+            })
+            .catch(error => {
+                console.error('Error loading articles:', error);
+                document.getElementById('article-list').innerHTML = '<li>Error loading articles</li>';
             });
     </script>
-
-    <script>
-        fetch('articles.json')
-            .then(response => response.json())
-            .then(articles => {
-                const articleList = document.getElementById('article-list');
-                articles.forEach(article => {
-                    const li = document.createElement('li');
-                    const a = document.createElement('a');
-                    a.href = article.path;
-                    a.textContent = article.title;
-                    li.appendChild(a);
-                    articleList.appendChild(li);
-                });
-            });
-    </script>
-    </body>
+</body>
 </html>

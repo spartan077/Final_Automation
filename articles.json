@@ -1,1 +1,18 @@
-[{"title": "Navy Football", "path": "navy_football/navy_football.html"}, {"title": "Lee Corso", "path": "lee_corso/lee_corso.html"}, {"title": "Ufc", "path": "ufc/ufc.html"}]
+[
+  {
+    "title": "Navy Football",
+    "path": "navy_football/navy_football.html"
+  },
+  {
+    "title": "Lee Corso",
+    "path": "lee_corso/lee_corso.html"
+  },
+  {
+    "title": "Ufc",
+    "path": "ufc/ufc.html"
+  },
+  {
+    "title": "Jets",
+    "path": "jets/jets.html"
+  }
+]
