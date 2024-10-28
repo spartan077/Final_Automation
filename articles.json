@@ -58,5 +58,9 @@
   {
     "title": "Private Yachts",
     "path": "private_yachts/private_yachts.html"
+  },
+  {
+    "title": "Online Dating",
+    "path": "online_dating/online_dating.html"
   }
 ]
