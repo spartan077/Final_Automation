@@ -60,4 +60,10 @@
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
+    <url>
+        <loc>https://saatvik.me/falcons_vs_buccaneers/falcons_vs_buccaneers.html</loc>
+        <lastmod>2024-10-28</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
 </urlset>
