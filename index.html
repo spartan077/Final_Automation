@@ -17,15 +17,30 @@
     <h1>Welcome to NexSphere Media</h1>
     <p>Explore our latest articles:</p>
     <ul id="article-list">
-        <!-- Articles will be loaded here -->
+        
+        <li><a href="navy_football/navy_football.html">Navy Football</a></li>
+        
+        <li><a href="lee_corso/lee_corso.html">Lee Corso</a></li>
+        
+        <li><a href="ufc/ufc.html">Ufc</a></li>
+        
+        <li><a href="jets/jets.html">Jets</a></li>
+        
+        <li><a href="bears/bears.html">Bears</a></li>
+        
     </ul>
 
     <script>
-        fetch('articles.json')
-            .then(response => response.json())
-            .then(articles => {
+        // Add dynamic update functionality
+        async function updateArticleList() {
+            try {
+                const response = await fetch(`articles.json?t=${new Date().getTime()}`);
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                const articles = await response.json();
+                
                 const articleList = document.getElementById('article-list');
-                articleList.innerHTML = ''; // Clear existing items
+                articleList.innerHTML = '';
+                
                 articles.forEach(article => {
                     const li = document.createElement('li');
                     const a = document.createElement('a');
@@ -34,11 +49,13 @@
                     li.appendChild(a);
                     articleList.appendChild(li);
                 });
-            })
-            .catch(error => {
-                console.error('Error loading articles:', error);
-                document.getElementById('article-list').innerHTML = '<li>Error loading articles</li>';
-            });
+            } catch (error) {
+                console.error('Error updating articles:', error);
+            }
+        }
+
+        // Update every minute
+        setInterval(updateArticleList, 60000);
     </script>
 </body>
 </html>
