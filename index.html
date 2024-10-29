@@ -3,89 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the latest articles from NexSphere Media">
     <title>NexSphere Media</title>
     <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 20px; }
-        h1 { color: #333; }
-        ul { list-style-type: none; padding: 0; }
-        li { margin-bottom: 10px; }
-        a { color: #1a73e8; text-decoration: none; }
-        a:hover { text-decoration: underline; }
+        /* Add your enhanced CSS here */
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        h1, h2, h3 { color: #2c3e50; }
+        img { max-width: 100%; height: auto; }
+        blockquote {
+            border-left: 4px solid #3498db;
+            margin: 1.5em 10px;
+            padding: 0.5em 10px;
+            quotes: "\201C""\201D""\2018""\2019";
+        }
     </style>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "NexSphere Media Homepage", "datePublished": "2024-10-29T14:41:52.625963", "dateModified": "2024-10-29T14:41:52.625963", "author": {"@type": "Organization", "name": "NexSphere Media"}}</script>
 </head>
 <body>
-    <h1>Welcome to NexSphere Media</h1>
-    <p>Explore our latest articles:</p>
-    <ul id="article-list">
+    <article>
         
-        <li><a href="navy_football/navy_football.html">Navy Football</a></li>
-        
-        <li><a href="lee_corso/lee_corso.html">Lee Corso</a></li>
-        
-        <li><a href="ufc/ufc.html">Ufc</a></li>
-        
-        <li><a href="jets/jets.html">Jets</a></li>
-        
-        <li><a href="bears/bears.html">Bears</a></li>
-        
-        <li><a href="chiefs_vs_raiders/chiefs_vs_raiders.html">Chiefs Vs Raiders</a></li>
-        
-        <li><a href="cowboys_vs_49ers/cowboys_vs_49ers.html">Cowboys Vs 49Ers</a></li>
-        
-        <li><a href="ravens_vs_browns/ravens_vs_browns.html">Ravens Vs Browns</a></li>
-        
-        <li><a href="daylight_savings_time/daylight_savings_time.html">Daylight Savings Time</a></li>
-        
-        <li><a href="falcons_vs_buccaneers/falcons_vs_buccaneers.html">Falcons Vs Buccaneers</a></li>
-        
-        <li><a href="packers_vs_jaguars/packers_vs_jaguars.html">Packers Vs Jaguars</a></li>
-        
-        <li><a href="saints_vs_chargers/saints_vs_chargers.html">Saints Vs Chargers</a></li>
-        
-        <li><a href="cardinals_vs_dolphins/cardinals_vs_dolphins.html">Cardinals Vs Dolphins</a></li>
-        
-        <li><a href="ai_agents/ai_agents.html">Ai Agents</a></li>
-        
-        <li><a href="private_yachts/private_yachts.html">Private Yachts</a></li>
-        
-        <li><a href="online_dating/online_dating.html">Online Dating</a></li>
-        
-        <li><a href="study_abroad_indian_students/study_abroad_indian_students.html">Study Abroad Indian Students</a></li>
-        
-        <li><a href="creator_economy/creator_economy.html">Creator Economy</a></li>
-        
-        
-
-        
-        
-    </ul>
-
-    <script>
-        // Add dynamic update functionality
-        async function updateArticleList() {
-            try {
-                const response = await fetch(`articles.json?t=${new Date().getTime()}`);
-                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-                const articles = await response.json();
-                
-                const articleList = document.getElementById('article-list');
-                articleList.innerHTML = '';
-                
-                articles.forEach(article => {
-                    const li = document.createElement('li');
-                    const a = document.createElement('a');
-                    a.href = article.path;
-                    a.textContent = article.title;
-                    li.appendChild(a);
-                    articleList.appendChild(li);
-                });
-            } catch (error) {
-                console.error('Error updating articles:', error);
-            }
-        }
-
-        // Update every minute
-        setInterval(updateArticleList, 60000);
-    </script>
+                <h1>Welcome to NexSphere Media</h1>
+                <p>Explore our latest articles:</p>
+                <ul id="article-list">
+                    <li><a href="navy_football/navy_football.html">Navy Football</a></li>
+<li><a href="lee_corso/lee_corso.html">Lee Corso</a></li>
+<li><a href="ufc/ufc.html">Ufc</a></li>
+<li><a href="jets/jets.html">Jets</a></li>
+<li><a href="bears/bears.html">Bears</a></li>
+<li><a href="chiefs_vs_raiders/chiefs_vs_raiders.html">Chiefs Vs Raiders</a></li>
+<li><a href="cowboys_vs_49ers/cowboys_vs_49ers.html">Cowboys Vs 49Ers</a></li>
+<li><a href="ravens_vs_browns/ravens_vs_browns.html">Ravens Vs Browns</a></li>
+<li><a href="daylight_savings_time/daylight_savings_time.html">Daylight Savings Time</a></li>
+<li><a href="falcons_vs_buccaneers/falcons_vs_buccaneers.html">Falcons Vs Buccaneers</a></li>
+<li><a href="packers_vs_jaguars/packers_vs_jaguars.html">Packers Vs Jaguars</a></li>
+<li><a href="saints_vs_chargers/saints_vs_chargers.html">Saints Vs Chargers</a></li>
+<li><a href="cardinals_vs_dolphins/cardinals_vs_dolphins.html">Cardinals Vs Dolphins</a></li>
+<li><a href="ai_agents/ai_agents.html">Ai Agents</a></li>
+<li><a href="private_yachts/private_yachts.html">Private Yachts</a></li>
+<li><a href="online_dating/online_dating.html">Online Dating</a></li>
+<li><a href="study_abroad_indian_students/study_abroad_indian_students.html">Study Abroad Indian Students</a></li>
+<li><a href="sites/sites.html">Sites</a></li>
+<li><a href="how_to_get_a_girlfriend?/how_to_get_a_girlfriend?.html">How To Get A Girlfriend?</a></li>
+<li><a href="social_media_negative_impact/social_media_negative_impact.html">Social Media Negative Impact</a></li>
+<li><a href="creator_economy/creator_economy.html">Creator Economy</a></li>
+<li><a href="music_industry_downfall/music_industry_downfall.html">Music Industry Downfall</a></li>
+                </ul>
+                <script>
+                    async function updateArticleList() {
+                        try {
+                            const response = await fetch('articles.json?t=' + new Date().getTime());
+                            if (!response.ok) throw new Error('HTTP error! status: ' + response.status);
+                            const articles = await response.json();
+                            const articleList = document.getElementById('article-list');
+                            articleList.innerHTML = '';
+                            articles.forEach(article => {
+                                const li = document.createElement('li');
+                                const a = document.createElement('a');
+                                a.href = article.path;
+                                a.textContent = article.title;
+                                li.appendChild(a);
+                                articleList.appendChild(li);
+                            });
+                        } catch (error) {
+                            console.error('Error loading articles:', error);
+                        }
+                    }
+                    updateArticleList();
+                    setInterval(updateArticleList, 60000);
+                </script>
+            
+    </article>
 </body>
 </html>
