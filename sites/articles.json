@@ -1,9 +1,5 @@
 [
   {
-    "title": "Navy Football",
-    "path": "navy_football/navy_football.html"
-  },
-  {
     "title": "Lee Corso",
     "path": "lee_corso/lee_corso.html"
   },
@@ -66,9 +62,5 @@
   {
     "title": "Study Abroad Indian Students",
     "path": "study_abroad_indian_students/study_abroad_indian_students.html"
-  },
-  {
-    "title": "Sites",
-    "path": "sites/sites.html"
   }
 ]

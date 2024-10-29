@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexSphere Media</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 20px; }
+        h1 { color: #333; }
+        ul { list-style-type: none; padding: 0; }
+        li { margin-bottom: 10px; }
+        a { color: #1a73e8; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_ADSENSE_ID"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1>Welcome to NexSphere Media</h1>
+    <p>Explore our latest articles:</p>
+    <ul id="article-list">
+        <!-- Static fallback list -->
+        {% for article in articles %}
+        <li><a href="{{ article.path }}">{{ article.title }}</a></li>
+        {% endfor %}
+    </ul>
+
+    <script>
+        // Function to update the article list
+        async function updateArticleList() {
+            try {
+                // Add cache-busting parameter
+                const response = await fetch(`articles.json?t=${new Date().getTime()}`);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const articles = await response.json();
+                
+                const articleList = document.getElementById('article-list');
+                articleList.innerHTML = ''; // Clear existing items
+                
+                articles.forEach(article => {
+                    const li = document.createElement('li');
+                    const a = document.createElement('a');
+                    a.href = article.path;
+                    a.textContent = article.title;
+                    li.appendChild(a);
+                    articleList.appendChild(li);
+                });
+
+                console.log('Articles loaded:', articles); // Debug log
+            } catch (error) {
+                console.error('Error loading articles:', error);
+                // Keep the static list if there's an error
+            }
+        }
+
+        // Initial load
+        updateArticleList();
+
+        // Refresh every minute
+        setInterval(updateArticleList, 60000);
+    </script>
+</body>
+</html>
